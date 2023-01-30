@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Kalender</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/main.css') }}">
+      <script type="text/javascript" src="{{ url_for('static', filename='js/js.js') }}"></script>
+
+  </head>
+    <header>
+        <h1>{{ "Kalender " + str(year) }}</h1>
+        <a href={{ "?year=" + str(int(year) - 1) }}>{{ str(int(year) - 1)  }}</a>
+        <a href={{ "?year=" + str(int(year) + 1) }}>{{ str(int(year) + 1)  }}</a>
+    </header>
+    <div class="container">
+        <table>
+            <tr>
+                <th colspan="2">Januar</th>
+                <th colspan="2">Februar</th>
+                <th colspan="2">März</th>
+                <th colspan="2">April</th>
+                <th colspan="2">Mai</th>
+                <th colspan="2">Juni</th>
+                <th colspan="2">Juli</th>
+                <th colspan="2">August</th>
+                <th colspan="2">September</th>
+                <th colspan="2">Oktober</th>
+                <th colspan="2">November</th>
+                <th colspan="2">Dezember</th>
+            </tr>
+            {% for i in range(31) %}
+            <tr>
+                {% for j in range(12) %}
+                <td class="{{ weekdayIsDayInMonth(year,j+1,i+1) }}"><button onclick="enableEventBlock({{ str(i+1) + "," + str(j+1) +"," + str(year) }})"><p>{{ i+1 }}</p></button></td><td class={{ ifEvent(year,j+1,i+1) }}></td>
+                {% endfor %}
+            </tr>
+            {% endfor %}
+        </table>
+
+    </div>
+    <button class="addEvent" onclick="enableAddEventBlock()">+</button>
+
+    <div id="Event">
+<button onclick="disableEventBlock()" class="bluer"></button>
+    <div class="grey-thing">
+    <h2>Events</h2>
+    <p id="date"></p>
+    <div id="events">
+
+    </div>
+
+        <button class="addEvent" id="addEvent" onclick="enableAddEventBlock()">+</button>
+    </div>
+</div>
+  <div id="addEventThing">
+      <button onclick="disableAddEventBlock()" class="bluer"></button>
+      <div class="grey-thing">
+            <h2>Event hinzufügen</h2>
+            <form action="/addEvent" method="post">
+                <input type="text" name="title" placeholder="Name" required>
+                <input type="text" id="inputDate" name="date" placeholder="Datum DD.MM.JJJJ - DD.MM.JJJJ" required>
+                <input type="text" id="inputTime" name="time" placeholder="Uhrzeit hh:mm - hh:mm" required>
+                <p id="miep">Wiederholung:</p>
+                <input type="text" name="repeat" placeholder="daily/monthly/yearly">
+                <input type="text" name="description" placeholder="Beschreibung">
+                <input type="submit" value="Hinzufügen">
+            </form>
+      </div>
+  </div>
+  </body>
+</html>

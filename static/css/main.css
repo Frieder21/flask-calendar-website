@@ -1,0 +1,208 @@
+* {
+  margin: 0;
+  padding: 0;
+  background-color: #444;
+}
+body {
+  font-family: 'Open Sans', sans-serif;
+  font-size: 16px;
+  line-height: 1.5;
+  background: #444;
+}
+header {
+  margin: 0 auto;
+  width: 50%; /* adjust this as per your requirement */
+  text-align: center;
+}
+a {
+  text-decoration: none;
+  color: lightgrey;
+}
+h1 {
+  margin: 0 auto;
+  width: 50%; /* adjust this as per your requirement */
+  text-align: center;
+  color: lightgrey;
+}
+
+
+h2 {
+  margin: 0 auto;
+  width: 50%; /* adjust this as per your requirement */
+  text-align: center;
+  color: lightgrey;
+}
+
+.visible {
+    visibility: visible;
+}
+
+.hidden {
+  visibility: hidden;
+}
+
+.container th {
+  width: 100px;
+  position: relative;
+  left: -10px;
+  color: lightgrey;
+}
+.container td {
+  text-align: center;
+  width: 100px;
+}
+
+#Event {
+  display: none;
+}
+
+#Event .deleteButton {
+  position: relative;
+  background: lightgray;
+  border-radius: 100%;
+  height: 25px;
+  width: 25px;
+  top: -35px;
+  left: 250px;
+}
+
+.container .Monday *{
+  background-color: #f4f4f4;
+}
+
+.container .Tuesday *{
+  background-color: #f4f4f4;
+}
+
+.container .Wednesday *{
+  background-color: #f4f4f4;
+}
+
+.container .Thursday *{
+  background-color: #f4f4f4;
+}
+
+.container .Friday *{
+  background-color: #f4f4f4;
+}
+
+.container .Saturday *{
+  background-color: #b08f8f;
+}
+
+.container .Sunday *{
+  background-color: #9d8282;
+}
+
+.container .noEvent {
+  background-color: rgba(0, 0, 0, 0);
+  width: 20px;
+  position: relative;
+  left: -20px;
+  pointer-events: none;
+}
+.container .event {
+  background: #7b4f55;
+  max-width: 20px;
+  position: relative;
+  left: -20px;
+  pointer-events: none;
+}
+
+.container table {
+  border-collapse:collapse;
+  margin: 0 auto;
+}
+
+button {
+  background-color: transparent;
+  border: none;
+  color: inherit;
+  font: inherit;
+  line-height: normal;
+  overflow: visible;
+  padding: 0;
+  width: 100px;
+}
+
+#addEventThing {
+  display: none;
+}
+
+#addEventThing div * {
+  background-color: rgba(0,0,0,0);
+}
+#Event div * {
+  background-color: rgba(0,0,0,0);
+}
+
+#Event #date {
+  width: 50%; /* adjust this as per your requirement */
+  color: lightgrey;
+  font-size: larger;
+  position: relative;
+  top: -1.65em;
+}
+
+#Event p {
+    width: 50%; /* adjust this as per your requirement */
+  color: lightgrey;
+}
+h3 {
+    width: 50%; /* adjust this as per your requirement */
+  color: lightgrey;
+}
+
+.addEvent {
+  position: absolute;
+  right: 1vw;
+  bottom: 1vw;
+  height: 3vw;
+  width: 3vw;
+  background: gray!important;
+  border-radius: 100%;
+  font-size: 2vw;
+}
+
+.bluer {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  opacity: 80%;
+  background-color: #444;
+  height: 100%;
+  width: 100%;
+}
+
+.grey-thing {
+  position: absolute;
+  background: #333;
+  top: 20vh;
+  left: 40vw;
+  right: 40vw;
+  bottom: 20vh;
+  border-radius: 20px;
+  padding: 20px;
+}
+
+input {
+     padding: 12px;
+     font-size: 15px;
+     border-width: 0px;
+    margin: 5px;
+     background-color: #444!important;
+     color: #ffd3d3;
+     border-style: solid;
+     border-radius: 16px;
+}
+input:focus {
+  outline: none;
+}
+#miep {
+     padding-left: 12px;
+     font-size: 15px;
+    margin: 5px;
+     color: #ffd3d3;
+}
